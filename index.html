@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rendering Demos — Bagrat Dabaghyan</title>
+<meta name="description" content="Real-time rendering experiments in Catoo, our in-house engine.">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --line: #30363d;
+    --link: #58a6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+  }
+  main { max-width: 960px; margin: 0 auto; padding: 48px 20px 64px; }
+  header h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  header p { margin: 0; color: var(--muted); }
+  article { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); }
+  article h2 { font-size: 20px; margin: 0 0 6px; }
+  article p { margin: 0 0 8px; }
+  .meta {
+    color: var(--muted);
+    font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    margin-bottom: 16px;
+  }
+  video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 6px;
+  }
+  .links { margin-top: 12px; font-size: 14px; color: var(--muted); }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  footer { margin-top: 64px; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <h1>Rendering Demos</h1>
+    <p>Real-time rendering experiments in Catoo, our in-house engine.</p>
+  </header>
+
+  <!-- Newest demo first. Copy this <article> block for each new demo. -->
+  <article id="neural-cloud-scattering">
+    <h2>Neural Cloud Scattering</h2>
+    <p>Cheap cloud scattering approximation using tiny neural networks: the network predicts the scattered light on cloud billboards, no volume raymarching.</p>
+    <p class="meta">iPhone 12 (A14) · 1080p @60+ fps · 10-bit AV1 / HEVC</p>
+
+    <!-- The browser plays the first source it supports: AV1, then HEVC. -->
+    <video controls playsinline loop preload="metadata"
+           poster="media/neural-cloud-scattering/poster.jpg">
+      <source src="media/neural-cloud-scattering/neural_cloud_scattering_av1_10bit.mp4"
+              type='video/mp4; codecs="av01.0.09M.10"'>
+      <source src="media/neural-cloud-scattering/neural_cloud_scattering_hevc_10bit.mp4"
+              type='video/mp4; codecs="hvc1.2.4.L123.B0"'>
+      Your browser can't play this video. Use the download links below.
+    </video>
+
+    <p class="links">
+      Download:
+      <a href="media/neural-cloud-scattering/neural_cloud_scattering_av1_10bit.mp4" download>AV1 10-bit</a> ·
+      <a href="media/neural-cloud-scattering/neural_cloud_scattering_hevc_10bit.mp4" download>HEVC 10-bit</a>
+    </p>
+  </article>
+
+  <footer>
+    © Bagrat Dabaghyan. All rights reserved. ·
+    <a href="https://github.com/dBagrat/rendering-demos">GitHub</a>
+  </footer>
+
+</main>
+</body>
+</html>
