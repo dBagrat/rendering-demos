@@ -5,10 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rendering Demos — Bagrat Dabaghyan</title>
 <meta name="description" content="Real-time rendering experiments in Catoo, our in-house engine.">
+<meta name="theme-color" content="#141414">
+<link rel="canonical" href="https://dbagrat.github.io/rendering-demos/">
+
+<!-- Link previews (Discord, Slack, Telegram, LinkedIn, Bluesky, X) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rendering Demos">
+<meta property="og:url" content="https://dbagrat.github.io/rendering-demos/">
+<meta property="og:title" content="Rendering Demos — Bagrat Dabaghyan">
+<meta property="og:description" content="Real-time rendering experiments in Catoo, our in-house engine.">
+<meta property="og:image" content="https://dbagrat.github.io/rendering-demos/media/neural-cloud-scattering/poster.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:alt" content="Neural Cloud Scattering: a cloud rendered in real time in Catoo on iPhone 12">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   :root {
     color-scheme: dark;
-    --bg: #0d1117;
+    --bg: #141414;
     --fg: #e6edf3;
     --muted: #8b949e;
     --line: #30363d;
@@ -26,7 +41,14 @@
   header p { margin: 0; color: var(--muted); }
   article { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); }
   article h2 { font-size: 20px; margin: 0 0 6px; }
+  .anchor { color: var(--muted); font-weight: normal; margin-left: 4px; }
+  .anchor:hover { color: var(--link); text-decoration: none; }
   article p { margin: 0 0 8px; }
+  .date {
+    color: var(--muted);
+    font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    margin-bottom: 12px;
+  }
   .meta {
     color: var(--muted);
     font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -55,8 +77,9 @@
 
   <!-- Newest demo first. Copy this <article> block for each new demo. -->
   <article id="neural-cloud-scattering">
-    <h2>Neural Cloud Scattering</h2>
-    <p>Cheap cloud scattering approximation using tiny neural networks: the network predicts the scattered light on cloud billboards, no volume raymarching.</p>
+    <h2>Neural Cloud Scattering <a class="anchor" href="#neural-cloud-scattering" aria-label="Link to this demo">#</a></h2>
+    <p class="date"><time datetime="2026-11-03">2026-11-03</time></p>
+    <p>Cheap cloud scattering approximation using tiny neural networks: the network predicts the scattered light on flat cloud impostors, no volume raymarching.</p>
     <p class="meta">iPhone 12 (A14) · 1080p @60+ fps · 10-bit AV1 / HEVC</p>
 
     <!-- The browser plays the first source it supports: AV1, then HEVC. -->
@@ -77,8 +100,8 @@
   </article>
 
   <footer>
-    © Bagrat Dabaghyan. All rights reserved. ·
-    <a href="https://github.com/dBagrat/rendering-demos">GitHub</a>
+    Bagrat Dabaghyan ·
+    <a href="https://github.com/dBagrat">GitHub</a>
   </footer>
 
 </main>
